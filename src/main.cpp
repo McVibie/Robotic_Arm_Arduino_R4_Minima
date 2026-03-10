@@ -33,7 +33,6 @@ void sendServoPulse(uint8_t pin, uint16_t pulseUs) {
 void writeServoAngle(uint8_t pin, int angle) {
   const uint16_t pulseUs = angleToPulseUs(angle);
 
-  // Send a few frames so the servo reliably reaches/holds the position.
   for (int i = 0; i < 3; ++i) {
     sendServoPulse(pin, pulseUs);
   }
@@ -133,7 +132,7 @@ void handleCommand(const String &command) {
 
   Serial.println("Unknown command!");
 }
-}  // namespace
+}
 
 void setup() {
   for (uint8_t pin : kServoPins) {
