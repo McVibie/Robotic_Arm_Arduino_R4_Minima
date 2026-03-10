@@ -47,6 +47,19 @@ Examples:
 - `speed20`
 - `s5120`
 
+## Pinout
+| Function | Arduino Pin | Notes |
+|---|---:|---|
+| Servo 1 signal | D5 | Base axis |
+| Servo 2 signal | D6 | Shoulder axis |
+| Servo 3 signal | D7 | Elbow axis |
+| Servo 4 signal | D8 | Wrist axis |
+| Gripper IN1 | D9 | Motor direction control |
+| Gripper IN2 | D10 | Motor direction control |
+| Gripper EN (PWM) | D11 | Speed/enable (analogWrite) |
+| Bluetooth RX (SoftwareSerial TX) | D3 | Connect to BT module TX |
+| Bluetooth TX (SoftwareSerial RX) | D4 | Connect to BT module RX (use level shifting if needed) |
+
 ## MIT App Inventor (Bluetooth App)
 ![MIT App Inventor Blocks](docs/images/mit-app/blocks.png)
 ![MIT App Inventor App Screen](docs/images/mit-app/app-screen.png)
